@@ -1,0 +1,128 @@
+body{
+	width:100%;
+	height:auto;
+	background-image: url(../images/wood-stain.jpg);
+	background-repeat:no-repeat;
+	background-position: 0 0 0 px;
+	-webkit-background-size:cover;
+	background-attachment: fixed; 
+}
+
+
+h2, h3, h4, h5 {
+	color: #f1dea3;
+	border:none;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 23px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 17px;
+}
+
+.header {
+	margin: 0px -40px 0px -40px;
+}
+
+#navbar-brand{
+	color: #363e52;
+	margin-left: 10px;
+}
+
+.footer {
+	color: #dddddd;
+	background-color: #ffffff;
+	border-top: solid 3px #363e52;
+}
+
+#footer-text {
+	color: #333333;
+}
+
+.port-title {
+	text-align: center;
+}
+
+.port-title-text {
+	text-align: center;
+	padding: 0px;
+	margin: 20px;
+}
+
+
+.main-title-row {
+	text-align: center;
+}
+
+.main-title-text{
+	border-bottom: solid 2px #ffffff;
+}
+
+.panel {
+	background-color: rgba(54, 62, 82, .8);
+	color: #ffffff;
+	border:solid 3px #dddddd;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.blog-prof-row{
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.blog-prof {
+	width: 300px;
+	height: 300px;
+	border:solid 3px #ffffff;
+	border-radius: 50%;
+	margin: 20px auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.blog-title, .connect-title, .main-title {
+	text-align: center;
+	border-bottom: solid 2px #ffffff;
+}
+
+.blog-subtitle {
+	padding: 10px 20px;
+	/*font-family: 'Abril Fatface', cursive;*/
+}
+
+.blog-date {
+	text-align: right;
+	color: #ffffff;
+	padding: 10px 20px;
+	font-size: 18px;
+	/*font-family: 'Slabo 27px', serif;*/
+}
+
+.challenge-div {
+	border-top: solid 2px #ffffff;
+	text-align: center;
+}
+
+/*
+.split-row {
+	color: #363e52;
+	text-align: center;
+	font-size: 28px;
+}*/
+
+
+
+
+
+
