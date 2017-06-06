@@ -507,6 +507,179 @@ var posts = [
 				info: ["Brought the 100 Day Coding Challenge in blog.js up to date"]
 			}
 		]
+	},{
+		day: 50,
+		date: "May 20, 2017", 
+		projects: [
+			{
+				title: "MongoScraper",
+				info: ["Created with basic file construction"]
+			},{
+				title: "QuidApp",
+				info: ["Created with basic file construction"]
+			}
+		]
+	},{
+		day: 51,
+		date: "May 21, 2017", 
+		projects: [
+			{
+				title: "MongoScraper",
+				info: ["Database Set-up with MongoDB"]
+			},{
+				title: "QuidApp",
+				info: ["Log-in creation using MongoDB and Passport"]
+			}
+		]
+	},{
+		day: 52,
+		date: "May 22, 2017", 
+		projects: [
+			{
+				title: "QuidApp",
+				info: ["Creation of game.html and index.html",
+						"Establishing of html-routes"]
+			}
+		]
+	},{
+		day: 53,
+		date: "May 23, 2017", 
+		projects: [
+			{
+				title: "QuidApp",
+				info: ["Basic functionality of game.js"]
+			}
+		]
+	},{
+		day: 54,
+		date: "May 24, 2017", 
+		projects: [
+			{
+				title: "MongoScraper",
+				info: ["Model creation and addaption for MongoDB construction"]
+			}
+		]
+	},{
+		day: 55,
+		date: "May 25, 2017", 
+		projects: [
+			{
+				title: "MongoScraper",
+				info: ["html creation with express-handlebars",
+						"route declration for handlebar displays"]
+			}
+		]
+	},{
+		day: 56,
+		date: "May 26, 2017", 
+		projects: [
+			{
+				title: "MongoScraper",
+				info: ["API routes declared for database gets/posts"]
+			}
+		]
+	},{
+		day: 57,
+		date: "May 27, 2017", 
+		projects: [
+			{
+				title: "MongoScraper",
+				info: ["constucting routes, model, and DB compatability"]
+			}
+		]
+	},{
+		day: 58,
+		date: "May 28, 2017", 
+		projects: [
+			{
+				title: "MongoScraper",
+				info: ["handlebar and DB adjustments"]
+			}
+		]
+	},{
+		day: 59,
+		date: "May 29, 2017", 
+		projects: [
+			{
+				title: "MongoScraper",
+				info: ["CSS styling for express-handlebar layouts", 
+						"adjustment of cheerio (scraper) to point to theonion.com"]
+			}
+		]
+	},{
+		day: 60,
+		date: "May 30, 2017", 
+		projects: [
+			{
+				title: "QuidApp",
+				info: ["adjustments to html-routes", 
+						"adjustments to game.js"]
+			}
+		]
+	},{
+		day: 61,
+		date: "May 31, 2017", 
+		projects: [
+			{
+				title: "NYTReact",
+				info: ["app construction with basic file layout"]
+			}
+		]
+	},{
+		day: 62,
+		date: "June 1, 2017", 
+		projects: [
+			{
+				title: "NYTReact",
+				info: ["establishing calls to MongoDB"]
+			}
+		]
+	},{
+		day: 63,
+		date: "June 2, 2017", 
+		projects: [
+			{
+				title: "NYTReact",
+				info: ["layout to react html display"]
+			}
+		]
+	},{
+		day: 64,
+		date: "June 3, 2017", 
+		projects: [
+			{
+				title: "NYTReact",
+				info: ["establishing and adjustments to api routes"]
+			}
+		]
+	},{
+		day: 65,
+		date: "June 4, 2017", 
+		projects: [
+			{
+				title: "Main Portfolio",
+				info: ["creation and alighnment from Bootstrap-Portfolio",
+						"deployment established to paden-pace.com"]
+			},{
+				title: "Quid App",
+				info: ["addition of preestablished league to game.js"]
+			}
+		]
+	},{
+		day: 66,
+		date: "June 5, 2017", 
+		projects: [
+			{
+				title: "burger_app",
+				info: ["DB adjustment and deployment to heroku"]
+			},{
+				title: "burgerSequelized",
+				info: ["DB adjustment and deployment to heroku"]
+			},{
+				title: "MongoScraper",
+				info: ["DB adjustment and deployment to heroku"]
+			}
+		]
 	}
 ];
 
