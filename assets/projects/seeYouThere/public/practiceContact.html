@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>See You There</title>
+	<meta charset="utf-8">
+
+	<!-- JQuery Link -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">></script>
+
+	<!-- Local JavaScript Link -->
+<!-- 	<script type="text/javascript" src="assets/javascript/app.js" ></script> -->
+		
+	<!-- 	Reset CSS Link Will Go Here
+		??????????????????????????????????????????? -->
+
+	<!-- Bootstrap Link -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Firebase link -->
+	<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+	<!-- Local CSS Link -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+</body>
+
+<script>
+$(document).ready(function(){
+
+	console.log("page open")
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyBdgyBTKWQwCDNUZzmMneGulvR6OEKepKI",
+		authDomain: "pjp-practice-example.firebaseapp.com",
+		databaseURL: "https://pjp-practice-example.firebaseio.com",
+		storageBucket: "pjp-practice-example.appspot.com",
+		messagingSenderId: "667257277475"
+	};
+	firebase.initializeApp(config);
+
+
+	// Create a variable to reference the database.
+	var database = firebase.database();
+
+	// Initial Variables
+	var firstCont = "";
+	var lastCont = "";
+	var emailCont = "";
+	var phoneCont = "";
+	
+
+	// Submit Button Click
+	$("#btnNewCont").on("click", function(event) {
+		event.preventDefault();
+		console.log("cont clicked");
+
+
+		// Get the information
+			// Grab values from text boxes
+		firstCont = $("#first-name-cont-input").val().trim();
+		lastCont = $("#last-name-cont-input").val().trim();
+		emailCont = $("#email-cont-input").val().trim();
+		phoneCont = $("#phone-cont-input").val().trim();
+
+
+		// Create a Storage Ref
+		var storageRef = firebase.storage().ref("contacts/" + firstCont + lastCont);
+
+		var newContact = {
+			firstCont: firstCont,
+			lastCont: lastCont,
+			emailCont: emailCont,
+			phoneCont: phoneCont,
+			dateAdded: firebase.database.ServerValue.TIMESTAMP
+		};
+
+		// upload file
+		var task = storageRef.push(newContact);
+
+		// Update the page with the information
+	});
+
+	// Firebase watcher + initial loader HINT: .on("value")
+	database.ref().on("child_added", function(snapshot) {
+
+		// storing the snapshot.val() in a variable for convenience
+		var snapValue = snapshot.val();
+		
+		// Getting an array of each key In the snapshot object
+		var snapValueArr = Object.keys(snapValue);
+
+		// Finding the last user's key
+		var lastIndex = snapValueArr.length - 1;
+
+		var lastKey = snapValueArr[lastIndex];
+
+		// Using the last user's key to access the last added user object
+		var lastObj = snapValue[lastKey]	
+
+	// 	// Handle the errors
+	}, function(errorObject) {
+		console.log("Errors handled: " + errorObject.code);
+	});
+
+		database.ref().orderByChild("lastCont").on("child_added", function(snapshot) {
+
+
+	// CODE FOR ADDING CONTACTS AS CHECKLIST	
+		// $('</br>').prependTo('#new-contacts-here');
+		// $('<input/>', {
+		// 	id: snapshot.val().firstCont + "-input",
+		// 	class: 'checkbox-input',
+		// 	type: 'checkbox',
+		// 	value: snapshot.val().emailCont
+		// }).prependTo('#new-contacts-here');
+		// $('<label/>', {
+		// 	id: snapshot.val().firstCont + "-label",
+		// 	class: 'checkbox-label',
+		// 	for: snapshot.val().emailCont,
+		// 	value: snapshot.val().emailCont,
+		// 	text: snapshot.val().firstCont + " " + snapshot.val().lastCont
+		// }).prependTo('#new-contacts-here');
+
+
+		var markup = "<tr><td>" + snapshot.val().firstCont + "</td><td>" + snapshot.val().lastCont + "</td><td>" + snapshot.val().emailCont + "</td><td>" + snapshot.val().phoneCont + "</td></tr>";
+		$("#exContactTable").append(markup);
+		});
+});
+
+
+</script>
+
+
+	<div class="container" id="main-cont">
+		
+		<div class="col col-lg-4" id="who">
+			<h3>Who?</h3>
+			<div class="contact-div" id="contact-div">
+				<form class= id="contact-form" enctype="text/plain" action="">
+					<div class="row">
+						<label class="first-name-cont-label" id="first-name-cont-label">First Name:</label><br>
+						<input type="text" value="" name="first-name-cont" placeholder="Bob" class="input" id="first-name-cont-input"><br>
+					</div>
+					<div class="row">
+						<label class="last-name-cont-label" id="last-name-cont-label">Last Name:</label><br>
+						<input type="text" value="" name="last-name-cont" placeholder="Smith" class="input" id="last-name-cont-input"><br>
+						</div>
+					<div class="row">
+						<label class="email-cont-label" id="email-cont-label">Email:</label><br>
+						<input type="text" value="" name="email" placeholder="Bob@Example.com" class="input" id="email-cont-input"><br>
+					</div>
+					<div class="row">
+						<label class="phone-cont-label" id="phone-cont-label">Phone:</label><br>
+						<input type="text" value="" name="phone" placeholder="512-555-1234" class="input" id="phone-cont-input"><br>
+					</div>
+				</form>
+				<div>
+					<button class="btn btn-success btnNewCont" id="btnNewCont">Create</button>
+				</div>
+			</div>
+			<div class="exContactBox exContactBox" id="exContactBox">
+					
+					<div class="row exContactTitle" id="exContactTitle">
+						<h3>Contact List</h3>
+					</div>
+					<div class="row exContactForm" id="exContactForm">
+						<table class='table exContactTable' id="exContactTable">
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Email</th>
+							<th>Phone</th>
+						</table>
+					</div>
+					<div class="row exContactTitle" id="exContactTitle">
+						<h3>Contact Form</h3>
+					</div>
+					<div class="row ex-contact-form-div col-md-12"></div>
+						<form id="contact-form" class="ex-contact-form" method="post" enctype="text/plain" action="mailto:pjpace27@yahoo.com">
+							<div class="row" id="new-contacts-here">
+								<br>
+							</div>
+							<div class="row">
+								<label>Message</label><br>
+								<textarea type="text" name="comment" rows="10" cols="70" id="Message-box">New Invitation</textarea><br>
+								</div>
+							<br><br>
+							<input type="submit" id="submit-button" name="submit-button" value="Submit"><br>
+						</form>
+				</div>
+				<!-- <div>
+					<h2>php email form:</h2>
+					<form name="contactform" method="post" role="form" action="send_form_email.php">
+					<table width="450px">
+					<tr>
+						<td valign="top">
+							<label for="first_name">First Name *</label>
+						</td>
+						<td valign="top">
+							<input  type="text" name="first_name" maxlength="50" size="30">
+						</td>
+					</tr>
+					<tr>
+						<td valign="top"">
+							<label for="last_name">Last Name *</label>
+						</td>
+						<td valign="top">
+							<input  type="text" name="last_name" maxlength="50" size="30">
+						</td>
+					</tr>
+					<tr>
+						<td valign="top">
+							<label for="email">Email Address *</label>
+						</td>
+						<td valign="top">
+							<input  type="text" name="email" maxlength="80" size="30">
+						</td>
+					</tr>
+					<tr>
+						<td valign="top">
+							<label for="telephone">Telephone Number</label>
+						</td>
+						<td valign="top">
+							<input  type="text" name="telephone" maxlength="30" size="30">
+						</td>
+					</tr>
+					<tr>
+						<td valign="top">
+							<label for="comments">Comments *</label>
+						</td>
+						<td valign="top">
+							<textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align:center">
+							<input type="submit" value="Submit">
+						</td>
+					</tr>
+					</table>
+					</form>
+				</div> -->
+
+			</div>
+	</div>
+
+
+</html>
