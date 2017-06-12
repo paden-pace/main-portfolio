@@ -1,0 +1,87 @@
+
+
+body{
+	background-image: url(https://i.ytimg.com/vi/JquobII5VjA/maxresdefault.jpg);
+}
+
+.navbar {
+	background-color: transparent;
+	border-width: 0px;
+	border-bottom-width: 3px;
+	border-style: solid;
+	border-color: #e7df0e;
+	color: #12c51a;
+}
+
+div{
+	font-family: 'Space Mono', monospace; 
+	font-size: 16px;
+}
+
+.jumbotron {
+	background-color: transparent;
+	color: #e00000;
+	font-weight: bolder;
+}
+
+.jumbo-logo {
+	width: 400px;
+	height: 300px;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 10;
+}
+
+button:active {
+	border-style: solid;
+	border-width: 3px;
+	border-color: #e7df0e;
+}
+
+
+h1{
+	display: block;
+	margin-top: -50px;
+	margin-left: auto;
+	margin-right: auto;
+    font-color: #e00000;
+    z-index: 20;
+}
+
+.text-center {
+	color: #e00000;
+	font-weight: bolder;
+}
+
+h3 {
+	text-align: center;
+	color: black;
+	font-weight: bold;
+}
+
+
+.inner {
+	background-color: #d8d8d8;
+	margin: 10px;
+	padding: 10px;
+	border-style: solid;
+	border-width: 10px;
+	border-color: #e7df0e;
+}
+
+
+.center-col {
+	text-align: center;
+}
+
+
+#answer-word {
+	text-align: center;
+}
+
+
+#letters-already-guessed {
+	text-align: center;
+}

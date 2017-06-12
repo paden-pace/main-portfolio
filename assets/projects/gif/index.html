@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Athlete Gif Search</title>
+
+    <!-- JQuery Link -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">></script>
+
+	 <script type="text/javascript" src="gifAssets/javaScript/app.js" ></script>
+	
+	<!-- Reset CSS Link -->
+	 <link rel="stylesheet" type="text/css" href="gifAssets/css/reset.css">
+
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+   	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+English+SC|Montserrat|Playfair+Display+SC" rel="stylesheet">
+
+    <!-- Local CSS Link -->
+    <link rel="stylesheet" type="text/css" href="gifAssets/css/style.css">
+
+</head>
+
+<body>
+
+	<div = class="container">
+		<div class="row row-title">
+			<h1>Athlete  Gif  Search</h1>
+		</div>
+
+		<div class="row row-search">
+			<form>
+		     	<span id="new-person">New Athlete: <input id="new-person-input" type="text" ><input id="new-person-add" value="Add" type="submit"></span>
+		    </form>
+		</div>
+
+		<div class="row row-buttons-gallery">
+			<div class="col col-lg-4 col-buttons col-gal" id="col-buttons">
+				<div>
+					<div class="row row-subtitle" id="row-subtitle-button">
+						<h3>Athletes:</h3>
+					</div>
+
+					<div class="row">
+						<div class="col col-lg-12">
+							<div class="button-location" id="button-location">
+								<div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col col-lg-7 col-gif-gal" id="col-gifs">
+				<div>
+					<div class="row row-subtitle" id="row-subtitle-gif">
+						<h3>Gifs:</h3>
+						<h4>(click the gif to play)</h4>
+					</div>
+					<div class="row">
+						<div id="both-gif">
+							<div class="col col-lg-6 col-gifs" id="gif-location1">
+							</div>
+							<div class="col col-lg-6 col-gifs" id="gif-location2">
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+		</div>
+		
+
+	</div>
+
+
+
+
+
+</body>
+</html>

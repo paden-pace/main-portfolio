@@ -1,0 +1,155 @@
+
+body {
+	font-family: 'Playfair Display SC', serif;
+}
+
+.container {
+	margin: 20px auto 20px auto;
+	background-color: #ddd7c5;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 3px;
+
+}
+
+h1 {
+	font-family: 'Playfair Display SC', serif;
+	text-align: center;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 0 0 3px 0;
+	padding-bottom: 30px;
+	margin: 30px 50px 30px 50px;
+};
+
+h3 {
+	margin: 0px 0px 0px 0px;
+	font-family: 'Playfair Display SC', serif;
+	text-align: center;
+	font-size: 20px;
+};
+
+.row-title {
+	text-align: center;
+}
+
+.row-search {
+	text-align: center;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 0 0 3px 0;
+	padding: 0 0 15px 0;
+	margin: -5px 40px 20px 40px;
+}
+#new-person-add {  
+	background-color: #dac52c;
+	margin: 3px;
+}
+
+#new-person-add:focus {
+	background-color: #dac52c;
+	margin: 3px;
+	outline: white;
+}
+
+#new-person-add:hover {
+	background-color: #b6a62e;
+	margin: 3px;
+}
+
+#new-person-add:active {
+	background-color: #ffffff;
+	margin: 3px;
+	outline: white;
+}
+
+.row-subtitle {
+	text-align: center;
+	margin: 0 auto 20px auto;
+	border-width: 0 0 3px 0;
+	border-style: solid;
+	border-color: #000000;
+}
+
+#row-subtitle-gif {
+	margin: 0 30px 20px 30px;
+}
+
+
+.col-buttons {
+/*	border-style: solid;
+	border-color: #000000;
+	border-width: 0 3px 0 0;*/
+	padding-bottom: 20px;
+	margin: 0px 40px 20px 40px;
+}
+
+.topic-button {
+	background-color: #dac52c;
+	margin: 3px;
+}
+
+.topic-button:focus {
+	background-color: #dac52c;
+	margin: 3px;
+	outline: white;
+}
+
+.topic-button:hover {
+	background-color: #b6a62e;
+	margin: 3px;
+}
+
+.topic-button:active {
+	background-color: #ffffff;
+	margin: 3px;
+	outline: white;
+}
+
+.imageAndRatingDiv{
+	width: 40%;
+	display: block;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.col-gif-gal {
+	padding-bottom: 20px;
+	margin: 0px 0px 20px 0px;
+	min-height: 300px;
+	border-color: #000000;
+	border-style: solid;
+	border-width: 0 0 0 3px;
+}
+
+.col-gifs {
+	text-align: center;
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+#gif-location1 {
+	margin: 5px auto 5px auto;
+
+}
+#gif-location2 {
+	margin: 5px auto 5px auto;
+}
+
+#both-gif {
+	width: 90%;
+	padding: 0 0 0 30px;
+}
+
+.gifImage {
+	display: block;
+	text-align: center;
+	margin: 2px 5px 5px 5px;
+	border-color: #000000;
+	padding: 3px;
+	border-style: solid;
+	border-width: 2px;
+
+}
+
+
