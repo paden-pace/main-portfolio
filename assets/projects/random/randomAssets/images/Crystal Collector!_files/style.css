@@ -1,0 +1,93 @@
+
+body {
+	background-image: url("https://s-media-cache-ak0.pinimg.com/736x/47/17/0e/47170e09a224e4e79e82976475ad0976.jpg")
+}
+
+.jumbo-row {
+	background-color: #c0c8d1;
+	border-style: solid;
+	border-width: 15px;
+	border-color: #4e4e4e;
+	border-radius: 25px;
+    padding: 20px; 
+}
+
+
+.container .jumbotron, .container-fluid .jumbotron {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding: 0px;
+}
+
+
+.jumbo-col {
+	background-color: #8ada56;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #165a09;
+	padding: 10px;
+	border-radius: 25px;
+    padding: 20px; 
+}
+
+#start-button {
+	background-color: #f1dea3;
+	color: #000000;
+	margin: 25px 0 10px 0;
+	border-color:#7e421b;
+	border-style: solid;
+	border-width: 5px;
+}
+
+.goal {
+	font-size: 14px;
+}
+
+.instructions p {
+	font-size: 15px;
+}
+
+.jumbotron h2 {
+	font-size: 36px;
+}
+
+.score {
+	background-color: #8ada56;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #165a09;
+	padding: 10px;
+	border-radius: 25px;
+    padding: 0 10px 20px 10px; 
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.stats {
+	background-color: #c0c8d1;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #4e4e4e;
+	border-radius: 25px;
+    padding: 0 10px 20px 10px; 
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+
+.img-crystal {
+	width: 200px;
+	height: 200px;
+	background-color: #8ada56;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #165a09;
+	padding: 10px;
+	border-radius: 25px;
+    padding: 20px; 
+}
+
+
+
+

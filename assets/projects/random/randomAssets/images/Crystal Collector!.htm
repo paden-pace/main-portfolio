@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)file:///Users/padenpace/code/week-4-game/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Crystal Collector!</title>
+
+    <!-- JQuery Link -->
+	 <script src="./Crystal Collector!_files/jquery.min.js">></script>
+
+	 <script type="text/javascript" src="./Crystal Collector!_files/game.js"></script>
+	
+	<!-- Reset CSS Link -->
+	 <link rel="stylesheet" type="text/css" href="./Crystal Collector!_files/reset.css">
+
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="./Crystal Collector!_files/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Local CSS Link -->
+    <link rel="stylesheet" type="text/css" href="./Crystal Collector!_files/style.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+	    <div class="jumbotron">
+	    	<div class="jumbo-row row">
+		    	<div class="col-md-4 goal">
+			    	<div class="goal jumbo-col">
+			    		<p>Goal: Increase your pizza points to equal the random number assigned at the begining of the round, but if your number goes over... You lose.</p>
+			    	</div>
+		    	</div>
+		    	<div class="col-md-4">
+		    		<div class="row">
+				    	<div class="goal jumbo-col">
+				    		<h2 class="text-center">Pizza Point Counter</h2>
+				    	</div>
+			    	</div>
+			    	<div class="row">
+				    	<div class="text-center">
+					    	<button id="start-button" class="btn btn-primary btn-lg">Start!</button>
+					    </div>
+					</div>	
+			    </div>
+				<div class="col-md-4 instructions">
+					<div class="goal jumbo-col">
+					    <p> By clicking one of the four turtles you will add a specifiic amount of points to your pizza points total.</p>
+					    <p>The value of each turtle is hidden until clicked, but will remaing the same through each round.</p>
+					</div>
+				</div>
+			</div>
+	   
+	    </div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="score">
+					<div class="row">
+						<h2>Pizza Points</h2>
+					</div>
+					<div class="row">
+						<h3 class="Number" id="numberTotal">0</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="stats">
+					<div class="row">
+						<h2>Statistics:</h2>
+					</div>
+					<div class="row">
+						<div id="wins">Wins: 0</div>
+					</div>
+					<div class="row">
+						<div id="losses">Losses: 0</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="score">
+					<div class="row">
+						<h2>Random Number</h2>
+					</div>
+					<div class="row">
+						<h3 class="Number" id="numberRand">#</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div>
+				<div class="col-md-3">
+					<img src="./Crystal Collector!_files/jewel_1.png" class="img-crystal" id="jewel_1">
+				</div>
+				<div class="col-md-3">
+					<img src="./Crystal Collector!_files/jewel_2.png" class="img-crystal" id="jewel_2">
+				</div>
+				<div class="col-md-3">
+					<img src="./Crystal Collector!_files/jewel_3.png" class="img-crystal" id="jewel_3">
+				</div>
+				<div class="col-md-3">
+					<img src="./Crystal Collector!_files/jewel_4.png" class="img-crystal" id="jewel_4">
+				</div>
+			</div>
+			
+		</div>
+		<div class="row">
+
+			
+		</div>
+
+    </div>
+
+
+
+
+</body></html>
