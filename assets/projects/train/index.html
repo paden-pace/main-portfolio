@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Employee Data Management</title>
+
+	<!-- JQuery Link -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Home JavaScript -->
+	<script type="text/javascript" src="trainAssets/javascript/app.js"></script>
+
+	<!-- Moment JavaScript -->
+  	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+	<!-- Firebase Link -->
+	<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+	
+	<!-- Local Reset CSS Link -->
+	<link rel="stylesheet" type="text/css" href="trainAssets/css/reset.css">
+
+	<!-- Bootstrap Link -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Local CSS Link -->
+	<link rel="stylesheet" type="text/css" href="trainAssets/css/style.css">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Shadows+Into+Light" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+	<div id="container">
+		<div class="row">
+			<div class = "jumbotron">
+				<div class="title">
+					<h1 id="TTS">Train Time Station</h1>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="subtitle">
+				<h3>Check the schedule to see already schedule trains,</h3>
+				<h3>or use the Add Train Form to add your own.</h3>
+			</div>
+		</div>
+
+
+		<div class="row" id="curRow">
+			<div class="framing">
+				<div class="col-lg-12 trainBox curTrainBox" id="curTrainBox">
+					
+					<div class="row trainTitle curTrainTitle" id="curTrainTitle">
+						<h3>Current Train Schedule</h3>
+					</div>
+					<div class="row trainForm curTrainForm" id="curTrainForm">
+						<table class='table curTrainTable' id="curTrainTable">
+							<th>Train Name</th>
+							<th>Destination</th>
+							<th>Frequency (min)</th>
+		  					<th>Next Arrival</th>
+		        			<th>Minutes Away</th>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="framing">
+				<div class="col-lg-12 trainBox addTrainBox" id="addTrainBox">
+					<div class="row trainTitle addTrainTitle" id="addTrainTitle">
+						<h3>Add Train</h3>
+					</div>
+					<div class="row trainForm addTrainForm" id="addTrainForm">
+						<form>
+							<div class="col-md-6">
+								<div class="row inputRow">
+									<label>Train Name:</label><br>
+									<input type="text" value="" name="name" placeholder="The Polar Express" class="inputBox" id="nameInput">
+									<br>
+								</div>
+								<div class="row inputRow">
+									<label>Destination:</label><br>
+									<input type="text" value="" name="dest" placeholder="The North Pole" class="inputBox" id="destInput">
+									<br>
+								</div>
+							</div>
+							<div class="col-md-6 rightInput">
+								<div class="row inputRow">
+									<label>First Train Time (HH:mm - military time):</label><br>
+									<input type="text" value="" name="first" placeholder="05:30" class="inputBox" id="firstInput">
+									<br>
+								</div>
+								<div class="row inputRow">
+									<label>Frequency (min):</label><br>
+									<input type="text" value="" name="freq" placeholder="60" class="inputBox" id="freqInput">
+									<br>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="row inputRow buttonRow">
+						<input id="submit-button" type="submit" name="Submit" value="Submit">
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+</body>
+
+</html>
