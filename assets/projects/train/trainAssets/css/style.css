@@ -1,0 +1,143 @@
+
+#container{
+	margin: 50px;
+}
+
+body{
+	background-image: url("../images/brick.jpeg");
+}
+
+.jumbotron{
+	width:auto;
+	text-align:center;
+	background-color: #07175a;
+	color: #9e870e;
+	font-family: 'Playfair Display SC', serif;
+	padding: 20px 50px 35px 50px;
+	border-style: solid;
+	border-width: 6px;
+	border-color: #e7b927;
+	border-radius: 30px;
+}
+
+#TTS{
+	font-size: 75px;
+	width: 85%;
+	text-align: center;
+	margin: 10px auto 10px auto;
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: #9e870e;
+}
+
+.subtitle{
+	width:90%;
+	text-align:center;
+	background-color: #07175a;
+	color: #9e870e;
+	padding: 15px auto 35px auto;
+	margin: auto;
+	font-family: 'Playfair Display SC', serif;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #e7b927;
+	border-radius: 30px;
+}
+
+h3 {
+	line-height: 10px;
+	margin: 25px;
+}
+
+.framing {
+	background-color: #000000;
+	border-style: solid;
+	border-width: 6px;
+	border-color: #e7b927;
+	padding: 15px;
+	margin: 15px 0 0 0;
+	border-radius: 20px;
+}
+
+.trainBox {
+	background-color: #e2d6b0;
+	padding: 10px;
+}
+
+.trainTitle {
+	text-align:center;
+	font-size: 30px;
+	padding: 15px;
+	margin: 10px;
+	font-family: 'Playfair Display SC', serif;
+	color: #000000;
+
+}
+
+#curTrainTable{
+   border: 3px solid black;
+}
+
+#curTrainForm{
+
+   margin: 10px;
+}
+
+table {
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 18px;
+}
+
+th {
+	font-family: 'Playfair Display SC', serif;
+	font-size: 16px;
+}
+
+table, th, tr, td {
+   border: 2px solid black;
+}
+
+#addTrainForm{
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	margin: 10px;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 18px;
+	padding: 10px;
+}
+
+#addTrainBox {
+	padding: 10px;
+}
+
+label {
+	font-family: 'Playfair Display SC', serif;
+	font-size: 20px;
+}
+
+#submit-button {
+	color: #e7b927;
+	font-family: 'Playfair Display SC', serif;
+	font-size: 20px;
+	background-color: #07175a;
+	padding: 6px 10px 6px 10px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #e7b927;
+}
+
+.inputRow {
+	margin: 10px;
+}
+
+.rightInput {
+	text-align: right;
+}
+
+.buttonRow {
+	text-align: center;
+}
+
+
+
+
