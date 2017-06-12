@@ -1,0 +1,20 @@
+
+
+
+
+h3 {
+	text-align: center;
+	color: black;
+}
+
+.center-col {
+	text-align: center;
+}
+
+#answer-word {
+	text-align: center;
+}
+
+#letters-already-guessed {
+	text-align: center;
+}

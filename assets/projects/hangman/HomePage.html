@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title>Hangman Home Page</title>
+    <!-- JQuery Link -->
+	 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+   <!-- Text Links -->
+   <link href="https://fonts.googleapis.com/css?family=Poller+One|Space+Mono" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css?family=Chango|Erica+One" rel="stylesheet">
+
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Local CSS Link -->
+    <link rel="stylesheet" type="text/css" href="hangmanAssets/css/HomePage-style.css">
+
+
+	</head>
+
+<body>
+<header>
+    <div class="header">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" id="nav-brand" href="HomePage.html">Home Page</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-tab"><a id ="nav-StarWars" href="hangmanAssets/html/StarWars-Hangman.html">Star Wars</a></li>
+            <li class="nav-tab"><a id="nav-Nostalgia" href="hangmanAssets/html/Nostalgia-Hangman.html">90s TV Shows</a></li>
+            <!-- <li class="nav-tab"><a href="contact.html">Contact</a></li> -->
+          </ul>
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+</header>
+
+	<div class="container">
+
+	    <div class="jumbotron">
+	      <h1 class="text-center">Want to play Hangman?</h1>
+	      <div class="text-center">
+	        <p>Choose which style of Hangman that you would like to play below</p>
+	      </div>
+	    </div>
+
+	    <div class="row">
+		      <div class="col-lg-6">
+		      	<div class="option-group">
+		        	<div clas ="row">
+						<a href="hangmanAssets/html/StarWars-Hangman.html">
+							<img src="hangmanAssets/images/Star-Wars-Logo.png" alt="Star Wars Hangman" class="option-img" id="option-StarWars"/>
+							</a>
+					</div>
+					<div class="row">
+			        	<a href="hangmanAssets/html/StarWars-Hangman.html" class="option-title" id="title-StarWars">Star Wars Hangman</a>
+			        </div>
+			    </div>
+		 	  </div>
+
+		    <div class="col-lg-6">
+			  <div class="option-group">
+		        <div clas ="row">
+					<a href="hangmanAssets/html/Nostalgia-Hangman.html">
+						<img src="hangmanAssets/images/1990.png" alt="90s TV Shows Hangman" class="option-img" id="option-Nostalgia"/>
+						</a>
+				</div>
+				<div class="row option-row">
+		        	<a href="hangmanAssets/html/Nostalgia-Hangman.html" class="option-title" id="title-Nostalgia">90s Nostalgia Hangman</a>
+		        </div>
+		      </div>
+	    	</div>
+	    </div>
+
+  	</div>
+
+
+</body>
+
+</html> 

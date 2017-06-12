@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Star Wars Hangman</title>
+
+    <!-- JQuery Link -->
+	 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+   <!-- Text Links -->
+   <link href="https://fonts.googleapis.com/css?family=Poller+One|Space+Mono" rel="stylesheet">
+
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Local CSS Link -->
+    <link rel="stylesheet" type="text/css" href="../css/StarWars-style.css">
+
+  <style type="text/css">
+
+      .answer-letter{
+        display: inline;
+      }
+
+      #answer-letter2{
+      }
+
+      #letters-already-guessed{
+        display: inline;
+      }
+
+      #guessed-letters{
+        display: inline;
+      }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../../HomePage.html">Home Page</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-tab"><a href="StarWars-Hangman.html">Star Wars</a></li>
+            <li class="nav-tab"><a href="Nostalgia-Hangman.html">90s TV Shows</a></li>
+            <!-- <li class="nav-tab"><a href="contact.html">Contact</a></li> -->
+          </ul>
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="jumbotron">
+
+      <img src="../images/Star-Wars-Logo.png" alt="Star Wars Logo" class="jumbo-logo">
+
+      <h1 class="text-center">HANGMAN</h1>
+
+      <div class="text-center">
+        <!-- Here we have our button for generating random numbers (#random-button) -->
+        <button id="start-button" class="btn btn-success btn-lg">Start!</button>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col col-lg-3">
+        <div class="inner">
+          <h3>Stats</h3>
+          <div id="correct-guesses">Correct Guesses</div>
+          <div id="incorrect-guesses">Incorrect Guesses</div>
+        </div>
+      </div>
+
+      <div class="col center-col col-lg-6">
+        <div class="inner">
+          <h3>The selected word is:</h3>
+          <!-- <div id="selected-word"></div> -->
+          <div id="answer-word"></div>
+          <h3>Letters already guessed:</h3>
+          <div id="letters-already-guessed"></div>
+        </div>
+      </div>
+
+      <div class="col col-lg-3">
+        <div class="inner">
+          <h3>Wins and Losses</h3>
+          <div id="total-wins">Total Wins:</div>
+          <div id="total-losses">Total Losses:</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+    var totalWins = 0;
+    var totalLosses = 0;
+
+    var wordList = [
+                        ["S","k","y","w","a","l","k","e","r"], 
+                        ["P","r","i","n","c","e","s","s"," ","L","e","i","a"],
+                        ["l","i","g","h","t","s","a","b","e","r"],
+                        ["e","w","o","k","s"],
+                        ["L","a","n","d","o"],
+                        ["c","h","a","n","c","e","l","l","e","r"],
+                        ["G","r","i","e","v","o","u","s"],
+                        ["d","e","a","t","h"," ","s","t","a","r"],
+                        ["P","a","d","m","e"],
+                        ["T","a","t","o","o","i","n","e"],
+                        ["C","h","e","w","b","a","c","c","a"],
+                        ["w","o","o","k","i","e"],
+                        ["J","a","r"," ","J","a","r"," ","B","i","n","k","s"],
+                        ["M","i","l","l","e","n","i","u","m"," ","F","a","l","c","o","n"],
+                        ["B","o","b","b","a"," ","F","e","t","t"],
+                        ["H","a","n"," ","S","o","l","o"],
+                        ["A","n","a","k","i","n"],
+                        ["D","a","r","t","h"," ","V","a","d","e","r"],
+                        ["D","a","r","t","h"," ","M","a","u","l"],
+                        ["D","a","r","t","h"," ","S","i","d","i","o","u","s"],
+                        ["D","a","r","t","h"," ","T","y","r","a","n","n","o","u","s"],
+                        ["A","l","d","e","r","a","a","n"],
+                        ["m","i","d","i","c","h","l","o","r","i","a","n","s"],
+                        ["j","e","d","i"],
+                        ["f","o","r","c","e"],
+                        ["r","e","p","u","b","l","i","c"],
+                        ["s","e","n","a","t","o","r"],
+                        ["D","a","g","o","b","a","h"],
+                        ["C","o","r","u","s","c","a","n","t"],
+                        ["c","l","o","n","e","s"],
+                        ["d","r","o","i","d","s"],
+                        ["M","a","c","e"," ","W","i","n","d","u"],
+                        ["M","a","s","t","e","r"," ","Y","o","d","a"],
+                        ["O","b","i"," ","W","a","n"," ","K","e","n","o","b","i"],
+                        ["Q","u","i"," ","G","o","n"," ","J","i","n","n"],
+                        ["P","a","l","p","a","t","i","n","e"],
+                        ["s","a","n","d"," ","p","e","o","p","l","e"],
+                        ["s","e","p","a","r","a","t","i","s","t"],
+                        ["t","a","u","n"," ","t","a","u","n"],
+                        ["p","o","d"," ","r","a","c","i","n","g"],
+                        ];
+
+    $(document).ready(function() {
+
+      console.log("page opened!");
+
+
+      //pressing start to begin the game
+       $("#start-button").on("click", function(){
+          console.log("clicked!");
+
+          //declaring my variables that will restart with each game.
+          var noAmount = 10;
+          var yesAmount = 0;
+          var lettersAG = [""];
+
+          $("#start-button").html("Restart");
+
+          //displaying the number of correct guesses in html
+          $("#correct-guesses").html("Correct Guesses: " + yesAmount);
+          $("#incorrect-guesses").html("Remaining Incorrect Guesses: " + noAmount);
+          $("#total-wins").html("Total Wins: " + totalWins);
+          $("#total-losses").html("Total Losses: " + totalLosses);
+          $("#letters-already-guessed").html("");
+
+
+          //the word to be guessed is selected using random and an array 
+          var randomNumber = (Math.floor(Math.random() * wordList.length ));
+          console.log(randomNumber);
+          var calledWord = wordList[randomNumber];
+          console.log(calledWord);
+          console.log(calledWord.length);
+          var spacesNumber = 0;
+
+          //displaying the guess portal for the word to be guessed
+          
+         
+          $("#selected-word").html(calledWord);
+          $("#answer-word").html("");
+
+          var answerDiv =[];
+          for (var i = 0; i < calledWord.length; i++) {
+
+
+          console.log(calledWord[i]);
+
+          if (calledWord[i] === " "){
+            spacesNumber++;
+            console.log("spacesNumber: " + spacesNumber);
+            {$('<div/>', {
+                      id: "answer-letter" + [i],
+                      class: "answer-letter",
+                      text: "   _  ",
+                  }).appendTo("#answer-word");}
+          } else {
+            console.log("stars added")
+            $('<div/>', {
+                      id: "answer-letter" + [i],
+                      class: "answer-letter",
+                      text: " * ",
+                  }).appendTo("#answer-word");}
+          };
+          
+
+ 
+
+
+//---------------------------------------------------------------------------------------------------  
+//        creating the function that will occur when a letter is guessed  
+//---------------------------------------------------------------------------------------------------     
+
+          //creating the function that will occur when a letter is guessed   
+          document.onkeyup = function(event) {
+              var guessedLetter = event.key;
+              console.log(guessedLetter);
+              var noLetter = 0;
+              var letterCheck = 0;
+              var approvedLetter = "";
+              var checkAmount = calledWord.length - spacesNumber;
+
+
+                  // lettersAG.push(guessedLetter);
+                  // console.log(lettersAG);
+
+
+              for (var i = 0; i < lettersAG.length; i++) {
+                if (guessedLetter === lettersAG[i]) {
+                  alert("That leter has already been guessed.");
+                  break;
+                };
+              };
+
+              for (var i = 0; i < lettersAG.length; i++) {
+                if (guessedLetter != lettersAG[i]) {
+                  letterCheck++;
+
+                  if (letterCheck === lettersAG.length) {
+                  var approvedLetter = guessedLetter;
+
+
+                  $('<div/>', {
+                       id: "guessed-letters",
+                      text: approvedLetter + " ",
+                  }).appendTo("#letters-already-guessed");
+              
+                
+
+                //the for loop that will see if the guessed letter is in the word to be guessed 
+                    for (var i = 0; i < calledWord.length; i++) {
+                        var lowerCaseCalledWord = calledWord[i].toLowerCase();
+                      if (approvedLetter === lowerCaseCalledWord){
+                        console.log(calledWord[i]);
+                                          lettersAG.push(approvedLetter);
+                        $("#answer-letter" + [i]).html(calledWord[i]);
+                        yesAmount++;
+                        $("#correct-guesses").html("Correct Guesses: " + yesAmount);
+                          if (yesAmount === checkAmount) {
+                            totalWins++;
+                            $("#total-wins").html("Total Wins: " + totalWins);
+                            alert("Congrats you win!!!");
+                            $("#start-button").html("Play Again?");
+                            break;
+                          };
+                      } else {
+                        noLetter++;
+                          if (noLetter === calledWord.length) {
+                            console.log("no");
+                                              lettersAG.push(approvedLetter);
+                            noAmount--;
+                            $("#incorrect-guesses").html("Remaining Incorrect Guesses: " + noAmount);
+                            if (noAmount === 0) {
+                              totalLosses++;
+                              $("#total-losses").html("Total Losses: " + totalLosses);
+                              alert("You lost... I'm not even mad, I'm just disappointed...");
+                              $("#start-button").html("Play Again?");
+                              break;
+                            };
+                          };
+                      };
+
+
+
+                      };
+                      break;
+                    };
+
+             };
+                };
+              };
+
+
+});
+      });
+
+
+    
+
+
+
+</script>
+</body>
+</html>
