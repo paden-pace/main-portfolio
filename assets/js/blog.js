@@ -680,6 +680,91 @@ var posts = [
 				info: ["DB adjustment and deployment to heroku"]
 			}
 		]
+	},{
+		day: 67,
+		date: "June 6, 2017", 
+		projects: [
+			{
+				title: "Main Portfolio",
+				info: ["Updates to blog.js"]
+			}
+		]
+	},{
+		day: 68,
+		date: "June 7, 2017", 
+		projects: [
+			{
+				title: "NYTreact",
+				info: ["adjustments to heroku DB"]
+			}
+		]
+	},{
+		day: 69,
+		date: "June 8, 2017", 
+		projects: [
+			{
+				title: "NYTreact",
+				info: ["route adjustment and final stylization"]
+			}
+		]
+	},{
+		day: 70,
+		date: "June 9, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["adjustment for Mongo DB", 
+						"addition of react and tournament files"]
+			}
+		]
+	},{
+		day: 71,
+		date: "June 10, 2017", 
+		projects: [
+			{
+				title: "Main Portfolio",
+				info: ["addition of random number game", 
+						"addition of gif application"]
+			}
+		]
+	},{
+		day: 72,
+		date: "June 11, 2017", 
+		projects: [
+			{
+				title: "Main Portfolio",
+				info: ["addition of hangman game", 
+						"addition of See You There application"]
+			}
+		]
+	},{
+		day: 73,
+		date: "June 12, 2017", 
+		projects: [
+			{
+				title: "Main Portfolio",
+				info: ["addition of train application"]
+			},{
+				title: "D_D_repo",
+				info: ["addition of .gitignore file", 
+						"adjustment of file layout"]
+			},{
+				title: "RollInit",
+				info: ["addition of .gitignore file", 
+						"adjustment of file layout and package.json",
+						"connection to JS and CSS"]
+			}
+		]
+	},{
+		day: 73,
+		date: "June 12, 2017", 
+		projects: [
+			{
+				title: "Main Portfolio",
+				info: ["updates to 100 Day Coding Challenge",
+						"update to portfolio content and layout"]
+			}
+		]
 	}
 ];
 
