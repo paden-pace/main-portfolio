@@ -1,0 +1,57 @@
+/*base*/
+html {
+	font-family: 'Della Respira', serif;
+}
+
+
+body{
+	font-family: 'Della Respira', serif;
+	width:100%;
+	height:auto;
+	background-image: url(./../img/table.jpg);
+	background-repeat:no-repeat;
+	background-position: 0 0 0 px;
+	-webkit-background-size:cover;
+	background-attachment: fixed; 
+}
+/*details*/
+.game {
+	width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 3px solid #000000;
+	text-align: center;
+	background-color: #ffffff;
+}
+.cards {
+	height: 350px;
+}
+	.cards__img {
+		width: 150px;
+		height: 208px;
+	}
+	.cards__text {
+
+	}
+.controls {
+	border-top: 1px solid #E0E0E0;
+	padding: 20px 0 0;
+}
+	.controls__btn {
+		display: none;
+		font-family: 'Della Respira', serif;
+	}
+
+
+.main-bar-btn{
+    display: block;
+	text-align: left;
+}
+.main-bar{
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px auto 40px auto;
+    border-bottom: solid 2px #ffffff;
+	margin-bottom: 20px;
+}

@@ -756,14 +756,269 @@ var posts = [
 			}
 		]
 	},{
-		day: 73,
-		date: "June 12, 2017", 
+		day: 74,
+		date: "June 13, 2017", 
 		projects: [
 			{
 				title: "Main Portfolio",
 				info: ["updates to 100 Day Coding Challenge",
 						"update to portfolio content and layout"]
 			}
+		]
+	},{
+		day: 75,
+		date: "June 14, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Creation of basic MongoDB routes"]
+			}
+		]
+	},{
+		day: 76,
+		date: "June 15, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Updates to User collection in MongoDB"]
+			}
+		]
+	},{
+		day: 77,
+		date: "June 16, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["Adjustments to User collection in MongoDB"]
+			}
+		]
+	},{
+		day: 78,
+		date: "June 17, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Established Character collection in MongoDB",
+						"Site wide adjustments to JavaScript"]
+			}
+		]
+	},{
+		day: 79,
+		date: "June 18, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Developed routes between User and Character collections"]
+			}
+		]
+	},{
+		day: 80,
+		date: "June 19, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Updates to database correlation",
+						"Sitewide file structure adjustments"]
+			}
+		]
+	},{
+		day: 81,
+		date: "June 20, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Updates to database correlation",
+						"Basic CSS adjustments and beautification"]
+			},{
+				title: "Quid App",
+				info: ["Sitewide file structure adjustments",
+						"Addition of Tournament collection to MongoDB"]
+			}
+		]
+	},{
+		day: 82,
+		date: "June 21, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Establishment of API routes and structure",
+						"Creation of BardClass API route"]
+			},{
+				title: "Quid App",
+				info: ["Addition of Team collection to MongoDB"]
+			}
+		]
+	},{
+		day: 83,
+		date: "June 22, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Adjustment to multiple API routes"]
+			},{
+				title: "Quid App",
+				info: ["Correltation development between MongoDB collections"]
+			},{
+				title: "Main Portfolio",
+				info: ["Updates to 100 Day Coding Challenge"]
+			}
+		]
+	},{
+		day: 84,
+		date: "June 23, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Updates to DB of 8 class features"]
+			}
+		]
+	},{
+		day: 85,
+		date: "June 24, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Completion of Character Background DB"]
+			}
+		]
+	},{
+		day: 86,
+		date: "June 25, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Updates to DB of 4 class features"]
+			}
+		]
+	},{
+		day: 87,
+		date: "June 26, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["Adjustments of Tournament DB registration",
+						"Tournament display updates"]
+			}
+		]
+	},{
+		day: 88,
+		date: "June 27, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Adjustment of Class DB"]
+			},
+		]
+	},{
+		day: 89,
+		date: "June 28, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["beginning of site-wide styling"]
+			},
+		]
+	},{
+		day: 90,
+		date: "June 29, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["Adjustments to routes to solve react functionality"]
+			},
+		]
+	},{
+		day: 91,
+		date: "June 30, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["Creation of react tournament components"]
+			},
+		]
+	},{
+		day: 92,
+		date: "July 1, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["Adjustments to tournament components routes for react"]
+			},
+		]
+	},{
+		day: 93,
+		date: "July 2, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["Adjustments to site-wide styling",
+						"Updates to react file structure"]
+			},
+		]
+	},{
+		day: 94,
+		date: "July 3, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Updates to package.json and site adjustments"]
+			},
+		]
+	},{
+		day: 95,
+		date: "July 4, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["Addition of dynamic react child components"]
+			},
+		]
+	},{
+		day: 96,
+		date: "July 5, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Debugging site-wide"]
+			},
+		]
+	},{
+		day: 97,
+		date: "July 6, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["React route structure and display for Teams adjustments"]
+			},
+		]
+	},{
+		day: 98,
+		date: "July 7, 2017", 
+		projects: [
+			{
+				title: "Roll Init",
+				info: ["Addition of all API HTML pages",
+						"Final updates to Character Creator"]
+			},
+		]
+	},{
+		day: 99,
+		date: "July 8, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["Adjustments to react file structure",
+						"Updates to MongoDB calls for Tournaments"]
+			},
+		]
+	},{
+		day: 100,
+		date: "July 9, 2017", 
+		projects: [
+			{
+				title: "Quid App",
+				info: ["Log-in, Register, and Log-out functionality through react"]
+			},
 		]
 	}
 ];

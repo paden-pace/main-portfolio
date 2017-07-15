@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Della+Respira" rel="stylesheet">
+    <!-- Bootstrap Link -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/view.css" type="text/css">
+    
+
+    <title>Arcade Sequelize App</title>
+</head>
+
+<body>
+
+<div class="body">
+    <div class= "row main-bar" id="main-bar">
+        <div class="col-md-6 main-bar-left">
+            <h4 id="current-name">You're not currently logged in.</h4>
+        </div>
+        <div class="col-md-6 main-bar-right">
+        </div>
+    </div>
+    <div id="id01" class="modal">
+        <div class="internal-modal row">
+            <div class="internal-modal col-md-12">
+            <form id='logIn' class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" id='close' title="Close Modal">&times;</span>
+                    <h2>Create a Profile</h2>
+                        <h4>OR</h4>
+                        <h2>Log In to your Existing Account</h2>
+                </div>
+
+                <div class="container" id='toobig'>
+                    <label class='row' id='uzername'><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" class='username' required>
+
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" class='pword' required>
+
+                    <button type="submit" id='createNewPlayer'>Log-In or Create Profile</button>
+                    <input type="checkbox" checked="checked"> Remember me
+                </div>
+
+                <div class="container" id=" cancel-container" style="background-color:#000000; text-align: center; width: 60%">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <!--<span class="psw">Profile Already Exists? <a href=# id='switchToLogin'>Log In</a></span>-->
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="id02" class="modal">
+        <form id="createLogIn" class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <h2>Log In to an existing profile</h2>
+            </div>
+
+            <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button id='login' type="submit">Login</button>
+                <input type="checkbox" checked="checked"> Remember me
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Don't yet have a profile? <a href="#" id='switchToCreate'>Create a Profile</a></span>
+            </div>
+        </form>
+    </div>
+
+    <div id=alreadyexists class=modal display='none'>
+        <h2>This username already exists. Try logging in or creating a new user.</h2>
+    </div>
+
+    <div class="row welcome-row">
+        <h1>Welcome aboard the 'ARRR'-cade!</h1>
+        <p>Avast! Now that ye landlubbers are aboard the 'ARRR'-cade!</p>
+        <p>Prepare to compete against ye fello' scallywags for a place amungst the Leaderboard below! </p>
+    </div>
+
+    <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 leader-col">
+        <ul class="nav nav-tabs row">
+            <li role="presentation" class="lead-tab active" id="list-pog"><a class="score-tab" id="tab-pog" data-toggle="tab">Pog</a></li>
+
+            <li role="presentation" class="lead-tab" id="list-rps"><a class="score-tab" id="tab-rps" data-toggle="tab">A. P. S.</a></li>
+
+            <li role="presentation" class="lead-tab" id="list-simon"><a class="score-tab" id="tab-simon" data-toggle="tab" >Captain Says</a></li>
+
+            <li role="presentation" class="lead-tab" id="list-card"><a class="score-tab" id="tab-card" data-toggle="tab">Pirate Poker</a></li>
+        </ul>
+        <div class="tab-content row">
+            <div class="col-md-12 score-pane tab-pane fade in active" id="score-pog">
+                <div class="row score-name">
+                    <h3>Pogs High Score</h3>
+                </div>
+                <div> 
+                    <div class="pog-score-container all-score-container"></div>
+                </div>
+            </div>
+            <div class="col-md-12 score-pane tab-pane fade" id="score-rps">
+                <div class="row score-name">
+                    <h3>Anchor, Parrot, Sword! High Scores</h3>
+                </div>
+                <div> 
+                    <div class="rps-score-container all-score-container"></div>
+                </div>
+            </div>
+            <div class="col-md-12 score-pane tab-pane fade" id="score-simon">
+                <div class="row score-name">
+                    <h3>Captain Says High Scores</h3>
+                </div>
+                <div> 
+                    <div class="simon-score-container all-score-container"></div>
+                </div>
+            </div>
+            <div class="col-md-12 score-pane tab-pane fade" id="score-card">
+                <div class="row score-name">
+                    <h3>Pirate Poker High Scores</h3>
+                </div>
+                <div> 
+                    <div class="card-score-container all-score-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-12 scores-and-buttons">
+        <div class="row all-game-row">
+            <div class="col-md-3 game-col pog-col">
+                <div class="row game-row">
+                    <div class="pog-score">
+                    </div>
+                </div>
+                <div class="row game-row">
+                    <div class="pog-button">
+                        <a href="./pog">
+                            <h2><button class='buttonz'>PogProwess</button></h2>
+                        </a>
+                    </div>
+                </div>
+            </div>      
+            <div class="col-md-3 game-col rps-col">
+                <div class="row game-row">
+                    <div class="rps-score">
+                    </div>
+                </div>     
+                <div class="row game-row">
+                    <div class="rps-button">
+                        <a href="./rps">
+                            <h2><button class='buttonz'>Anchor, Parrot, Sword!</button></h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 game-col simon-col">
+                <div class="row game-row">
+                    <div class="simon-score">
+                    </div>
+                </div>
+                <div class="row game-row">
+                    <div class="simon-button">
+                        <a href="./simon">
+                            <h2><button class='buttonz'>Captain Says!</button></h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 game-col card-col">
+                <div class="row game-row">
+                    <div class="card-score">
+                    </div>
+                </div>
+                <div class="row game-row">
+                    <div class="card-button">
+                        <a href="./card">
+                            <h2><button class='buttonz'>Pirate Poker</button></h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="./js/view.js"></script>
+
+
+    <a class="apiOption" href="./api/players">
+        <p>API Players List</p>
+    </a>
+</div>
+
+<script src="./js/rps.js" type="text/javascript"></script>
+</body>
+
+</html>
