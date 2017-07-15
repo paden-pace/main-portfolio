@@ -104,6 +104,8 @@ body {
 	width:200px;
 	height:200px;
 	margin-bottom: 15px;
+	border-radius: 50%;
+	border:solid 2px #ffffff;
 }
 
 .outside {
