@@ -3,6 +3,9 @@
 // project = [array of projects (objects) with title and array of info updates]
 
 //var posts = require("./posts.js");
+
+console.log ("blog.js connected.")
+
 var posts = [
 	{
 		day: 1,
